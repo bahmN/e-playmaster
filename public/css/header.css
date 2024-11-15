@@ -1,6 +1,7 @@
 header {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 20px 300px;
     padding: 30px 0;
 
@@ -19,6 +20,10 @@ header a {
 
 header p {
     color: var(--white-color);
+}
+
+#epmLogo {
+    height: 50px;
 }
 
 .deposit {

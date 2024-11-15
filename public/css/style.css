@@ -39,6 +39,14 @@ input[type="number"] {
     padding: 5px;
     border: 1px solid var(--black-color);
     border-radius: 10px;
+
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+
+    background-image: var(--highlite-text-color);
+    color: transparent;
+    background-clip: text;
 }
 
 button {
