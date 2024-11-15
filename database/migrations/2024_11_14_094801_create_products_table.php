@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->integer('quantity');
-            $table->string('amount');
+            $table->float('amount', 2);
             $table->timestamps();
         });
     }

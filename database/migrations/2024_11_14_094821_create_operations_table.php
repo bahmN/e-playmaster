@@ -11,11 +11,11 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('operations', function (Blueprint $table) {
             $table->id();
-            $table->foreign('status_id')->references('id')->on('order_statuses')->default('');
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->integer('status_id')->default('1');
+            $table->integer('order_id');
             $table->string('external_operation')->nullable();
             $table->string('payment_id');
-            $table->$table->timestamps();
+            $table->timestamps();
         });
     }
 

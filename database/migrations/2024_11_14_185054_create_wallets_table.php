@@ -9,12 +9,9 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('wallets', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->json('products');
-            $table->float('amount', 2);
-            $table->integer('user_id');
-            $table->timestamps();
+            $table->boolean('is_set')->default(0);
         });
     }
 
@@ -22,6 +19,6 @@ return new class extends Migration {
      * Reverse the migrations.
      */
     public function down(): void {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('wallets');
     }
 };

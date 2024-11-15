@@ -9,11 +9,10 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('order_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->string('name', 15);
-            $table->string('code', 20);
-            $table->timestamps();
+        Schema::create('cache', function ($table) {
+            $table->string('key')->unique();
+            $table->text('value');
+            $table->integer('expiration');
         });
     }
 
@@ -21,6 +20,6 @@ return new class extends Migration {
      * Reverse the migrations.
      */
     public function down(): void {
-        Schema::dropIfExists('order_statuses');
+        Schema::dropIfExists('cache');
     }
 };

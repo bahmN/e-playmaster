@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 300px;
+    padding: 30px 0;
+
+    border-radius: 20px;
+    background: var(--highlite-text-color);
+    box-shadow: -15px 15px 15px var(--shadow-color);
+}
+
+header a {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--white-color);
+
+}
+
+header p {
+    color: var(--white-color);
+}
+
+.deposit {
+    display: flex;
+    gap: 5px;
+}
